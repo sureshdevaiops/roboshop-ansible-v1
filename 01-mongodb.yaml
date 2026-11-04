@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: copy mongo repo
-    cpoy:
+    copy:
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
 
@@ -28,4 +28,3 @@
     service:
      name:  mongod
      state: restarted
-     enabled: yes
